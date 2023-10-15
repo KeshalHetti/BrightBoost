@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .feedback-form {
+            width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        select, input[type="date"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="number"] {
+            width: 50px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="feedback-form">
+        <h1>Student Feedback Form</h1>
+        <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+            <label for="tutorName">Select Tutor:</label>
+            <select id="tutorName" name="tutorName">
+                <option value="Tutor A">Tutor A</option>
+                <option value="Tutor B">Tutor B</option>
+                <option value="Tutor C">Tutor C</option>
+            </select>
+            
+            <label for="feedbackDate">Date:</label>
+            <input type="date" id="feedbackDate" name="feedbackDate">
+            
+            <label for="tutorRating">How helpful was your tutor in addressing your questions or concerns?</label>
+            <input type="number" id="tutorRating" name="tutorRating" min="1" max="5">
+            
+            <br><label for="explainSubject">Did your tutor effectively explain and clarify the subject matter?</label>
+            <div class="star-rating">
+                <input type="radio" id="explain1" name="explainSubject" value="1">
+                <label for="explain1">Yes</label>
+                <input type="radio" id="explain2" name="explainSubject" value="2">
+                <label for="explain2">Somewhat</label>
+                <input type="radio" id="explain3" name="explainSubject" value="3">
+                <label for="explain3">No</label>
+            </div>
+            <br><label for="comfortableAsking">How comfortable did you feel asking questions to the tutor?</label>
+            <div class="star-rating">
+                <input type="radio" id="comfort1" name="comfortableAsking" value="1">
+                <label for="comfort1">1 (Less comfortable)</label>
+               <br> <input type="radio" id="comfort2" name="comfortableAsking" value="2">
+                <label for="comfort2">2</label>
+                <br><input type="radio" id="comfort3" name="comfortableAsking" value="3">
+                <label for="comfort3">3</label>
+                <br><input type="radio" id="comfort4" name="comfortableAsking" value="4">
+                <label for="comfort4">4</label>
+                <br><input type="radio" id="comfort5" name="comfortableAsking" value="5">
+                <label for="comfort5">5 (Very comfortable)</label>
+            </div>
+            <br><button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
